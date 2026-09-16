@@ -46,14 +46,15 @@
     .github-submit:hover{background:#1f2937}
     .github-meta{text-align:center;font-size:12px;color:#6b7280;margin-top:12px}
     body{background:linear-gradient(rgba(247,247,242,.4),rgba(247,247,242,.58)),url('assets/jujoys-group.jpg') center/cover fixed no-repeat}
-    .brand-symbol{background:var(--white) url('assets/jujoys-group.jpg') center/250% auto no-repeat;color:transparent;border-radius:50%;box-shadow:0 4px 12px rgba(23,37,31,.12)}
+    .brand-symbol{overflow:hidden;background:var(--white);border-radius:50%;box-shadow:0 4px 12px rgba(23,37,31,.12)}
+    .brand-symbol img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
   </style>
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Jujoys Download Center">
-        <span class="brand-symbol">J</span>
+        <span class="brand-symbol"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></span>
         <span><strong>Jujoys</strong><small>Download Center</small></span>
       </a>
       <nav class="nav-links" aria-label="Navigasi utama">
@@ -106,7 +107,7 @@
 
       <section class="help-section" id="help"><div><p class="eyebrow">Butuh bantuan?</p><h2>Temukan yang<br /><em>kamu butuhkan.</em></h2></div><a class="outline-button" href="mailto:jujoysteamwork@gmail.com">Hubungi kami <span>↗</span></a></section>
     </main>
-    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-symbol">J</span><span><strong>Jujoys</strong><small>Download Center</small></span></a><p>© 2026 Jujoys Group. Semua hak dilindungi.</p><span>Made for better days.</span></footer>
+    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-symbol"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></span><span><strong>Jujoys</strong><small>Download Center</small></span></a><p>© 2026 Jujoys Group. Semua hak dilindungi.</p><span>Made for better days.</span></footer>
   </div>
   <div class="modal-backdrop" id="app-modal" hidden><section class="app-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" type="button" aria-label="Tutup">×</button><div class="modal-icon" id="modal-icon">J</div><p class="eyebrow" id="modal-platform">Android</p><h2 id="modal-title">Nama aplikasi</h2><p id="modal-description"></p><div class="modal-meta"><span id="modal-version">Versi 1.0.0</span><span id="modal-size">24 MB</span><span id="modal-rating">★ 4.9</span><span id="modal-format">APK</span></div><a class="primary-button modal-download" id="modal-download" href="#" download>Download aplikasi <span>↓</span></a></section></div>
   <div class="github-modal" id="github-login-modal" hidden>
