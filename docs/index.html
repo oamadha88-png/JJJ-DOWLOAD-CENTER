@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jujoys Download Center - pusat download aplikasi resmi multi-platform." />
+  <title>Jujoys Download Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7252279352560306" crossorigin="anonymous"></script>
+  <style>
+    .ad-backdrop{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:rgba(23,37,31,.72)}
+    .ad-backdrop[hidden]{display:none}
+    .ad-box{position:relative;width:min(420px,100%);padding:28px;border:1px solid #dfe4dc;border-radius:18px;background:#f7f7f2;box-shadow:0 24px 70px rgba(0,0,0,.25)}
+    .ad-label{margin:0 0 18px;color:#7c877f;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .ad-sponsor{display:grid;gap:12px;border:1px dashed #bfcac0;border-radius:12px;background:#fff;color:#6c7871;text-align:center;font-size:13px;line-height:1.6}
+    .ad-slot{min-height:100px;display:grid;place-items:center;padding:8px;border-bottom:1px solid #edf0eb}
+    .ad-slot ins.adsbygoogle{display:block;width:100%;min-width:250px;min-height:90px}
+    .ad-slot:last-child{border-bottom:0}
+    .ad-box h2{margin:22px 0 10px;font-size:30px}
+    .ad-box p{color:#6c7871;font-size:13px;line-height:1.6}
+    .ad-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+    .ad-skip{border:0;background:transparent;color:#6c7871;font-size:12px;font-weight:700}
+    .ad-countdown{color:#17251f;font-size:12px;font-weight:700}
+    .header-actions{display:flex;align-items:center;gap:12px}
+    .github-login-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid rgba(23,37,31,.12);background:#0f172a;color:#fff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+    .github-login-button:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(15,23,42,.16)}
+    .github-login-button .gh-mark{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:#fff;color:#0f172a;font-size:10px;font-weight:800}
+    .github-login-button.is-logged-in{background:#f2f6f1;color:#17251f;border-color:rgba(23,37,31,.08)}
+    .github-modal{position:fixed;inset:0;display:grid;place-items:center;padding:20px;background:rgba(15,23,42,.58);z-index:30}
+    .github-modal[hidden]{display:none}
+    .github-card{width:min(420px,100%);background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:26px;box-shadow:0 24px 70px rgba(15,23,42,.2)}
+    .github-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .github-brand{display:flex;align-items:center;gap:10px;font-weight:800;color:#111827}
+    .github-brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#111827;color:#fff;font-weight:800}
+    .github-close{border:0;background:transparent;font-size:24px;cursor:pointer;color:#6b7280}
+    .github-card h3{margin:0 0 10px;font-size:28px;color:#111827}
+    .github-card p{margin:0 0 18px;color:#4b5563;line-height:1.6}
+    .github-form{display:grid;gap:14px}
+    .github-field{display:grid;gap:8px}
+    .github-field label{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#6b7280}
+    .github-field input{width:100%;border:1px solid #d1d5db;border-radius:12px;padding:12px 14px;font-size:15px;background:#f9fafb;color:#111827}
+    .github-submit{border:0;border-radius:12px;background:#111827;color:#fff;padding:13px 16px;font-weight:700;cursor:pointer}
+    .github-submit:hover{background:#1f2937}
+    .github-meta{text-align:center;font-size:12px;color:#6b7280;margin-top:12px}
+    body{
+      background:
+        radial-gradient(circle at top left, rgba(213,243,107,.42), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(241,161,94,.28), transparent 30%),
+        linear-gradient(135deg, #f7f7f2 0%, #edf7f0 42%, #fffaf2 100%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .page-shell{background:rgba(255,255,255,.12);backdrop-filter:blur(2px);border-radius:0}
+    .brand-symbol{overflow:hidden;background:var(--white);border-radius:50%;box-shadow:0 4px 12px rgba(23,37,31,.12)}
+    .brand-symbol img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+    .app-avatar{overflow:hidden;padding:0}
+    .app-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+    .phone-card .app-avatar{width:100%;height:112px;margin:0 auto 18px;border-radius:16px}
+    .brand strong{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Jujoys Download Center">
+        <span class="brand-symbol"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></span>
+        <span><strong>JUJOYS</strong><small>Download Center</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#apps">Aplikasi</a>
+        <a href="#why">Keunggulan</a>
+        <a href="#help">Bantuan</a>
+      </nav>
+      <div class="header-actions">
+        <button class="github-login-button" id="github-login-button" type="button"><span class="gh-mark">J</span><span id="github-login-label">Masuk Jujoys Group</span></button>
+        <button class="header-button" type="button" data-scroll="apps">Lihat aplikasi <span>↘</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow"><span></span> Official app library</p>
+          <h1 id="hero-title">Aplikasi yang<br /><em>siap menemanimu.</em></h1>
+          <p class="hero-copy">Temukan, kenali, dan download aplikasi Jujoys dari satu tempat yang aman dan mudah.</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-scroll="apps">Jelajahi aplikasi <span>→</span></button>
+            <a class="text-link" href="#why">Kenapa Jujoys? <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Preview aplikasi Jujoys">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="phone-card">
+            <div class="phone-notch"></div>
+            <div class="phone-top"><span>09:41</span><span>● ● ▪</span></div>
+            <div class="app-avatar"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></div>
+            <p class="phone-label">JUJOYS DAILY</p>
+            <strong>Make today<br /><em>count.</em></strong>
+            <div class="phone-stat"><span>Aktivitas hari ini</span><b>82%</b></div>
+            <div class="stat-bar"><span></span></div>
+            <div class="phone-grid"><i>◒</i><i>✦</i><i>↗</i></div>
+          </div>
+          <div class="floating-note note-top"><span>✦</span><div><strong>Official release</strong><small>Versi terverifikasi</small></div></div>
+          <div class="floating-note note-bottom"><strong>4.9</strong><span>★★★★★</span><small>rating pengguna</small></div>
+        </div>
+      </section>
+
+      <section class="apps-section" id="apps" aria-labelledby="apps-title">
+        <div class="section-heading"><div><p class="eyebrow">Pilih versimu</p><h2 id="apps-title">Semua aplikasi,<br /><em>satu pusat.</em></h2></div><p class="section-note">Download langsung dari sumber resmi<br />dengan versi terbaru.</p></div>
+        <div class="toolbar"><label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Cari aplikasi..." /></label><div class="filter-group" role="group" aria-label="Filter platform"><button class="filter-button is-active" type="button" data-filter="all">Semua</button><button class="filter-button" type="button" data-filter="android">Android</button><button class="filter-button" type="button" data-filter="windows">Windows</button><button class="filter-button" type="button" data-filter="macos">macOS</button></div></div>
+        <div class="app-grid" id="app-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>Aplikasi yang kamu cari belum ditemukan.</p>
+      </section>
+
+      <section class="why-section" id="why" aria-labelledby="why-title"><div><p class="eyebrow">Lebih dari sekadar download</p><h2 id="why-title">Dibuat rapi,<br /><em>dipilih dengan yakin.</em></h2></div><div class="benefit-list"><article><span>01</span><div><h3>Sumber resmi</h3><p>Setiap file berasal dari rilis yang terverifikasi dan mudah dilacak versinya.</p></div></article><article><span>02</span><div><h3>Selalu terbaru</h3><p>Temukan catatan versi dan pembaruan terbaru sebelum mengunduh.</p></div></article><article><span>03</span><div><h3>Tanpa drama</h3><p>Antarmuka bersih, proses singkat, dan tombol download yang jelas.</p></div></article></div></section>
+
+      <section class="help-section" id="help"><div><p class="eyebrow">Butuh bantuan?</p><h2>Temukan yang<br /><em>kamu butuhkan.</em></h2></div><a class="outline-button" href="mailto:jujoysteamwork@gmail.com">Hubungi kami <span>↗</span></a></section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-symbol"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></span><span><strong>JUJOYS</strong><small>Download Center</small></span></a><p>© 2026 Jujoys Group. Semua hak dilindungi.</p><span>Made for better days.</span></footer>
+  </div>
+  <div class="modal-backdrop" id="app-modal" hidden><section class="app-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" type="button" aria-label="Tutup">×</button><div class="modal-icon" id="modal-icon">J</div><p class="eyebrow" id="modal-platform">Android</p><h2 id="modal-title">Nama aplikasi</h2><p id="modal-description"></p><div class="modal-meta"><span id="modal-version">Versi 1.0.0</span><span id="modal-size">24 MB</span><span id="modal-rating">★ 4.9</span><span id="modal-format">APK</span></div><a class="primary-button modal-download" id="modal-download" href="#" download>Download aplikasi <span>↓</span></a></section></div>
+  <div class="github-modal" id="github-login-modal" hidden>
+    <section class="github-card" role="dialog" aria-modal="true" aria-labelledby="github-login-title">
+      <div class="github-card-header">
+        <div class="github-brand">
+          <span class="github-brand-mark">J</span>
+          <span>Jujoys Group</span>
+        </div>
+        <button class="github-close" id="github-close" type="button" aria-label="Tutup login Jujoys Group">×</button>
+      </div>
+      <h3 id="github-login-title">Masuk tanpa keluar dari sini</h3>
+      <p>Masuk ke akun Jujoys Group langsung dari halaman ini.</p>
+      <form class="github-form" id="github-login-form">
+        <div class="github-field">
+          <label for="github-username">Username atau email JUJOYS</label>
+          <input id="github-username" name="githubUsername" type="text" placeholder="nama-pengguna" autocomplete="username" required />
+        </div>
+        <div class="github-field">
+          <label for="github-password">Password</label>
+          <input id="github-password" name="githubPassword" type="password" placeholder="••••••••" autocomplete="current-password" required />
+        </div>
+        <button class="github-submit" type="submit">Masuk Jujoys Group</button>
+      </form>
+      <p class="github-meta">Demo UI Jujoys Group tanpa redirect ke browser eksternal.</p>
+    </section>
+  </div>
+  <div class="ad-backdrop" id="ad-modal" hidden><section class="ad-box" role="dialog" aria-modal="true" aria-labelledby="ad-title"><p class="ad-label">Sponsor · Iklan</p><div class="ad-sponsor"><div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-7252279352560306" data-ad-slot="3790106110"></ins></div><div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-7252279352560306" data-ad-slot="3790106110"></ins></div></div><h2 id="ad-title">Dukung aplikasi pilihanmu.</h2><p>Terima kasih sudah menggunakan Jujoys Download Center. Kamu akan diarahkan ke situs resmi aplikasi.</p><div class="ad-actions"><span class="ad-countdown" id="ad-countdown">Lanjut dalam 4 detik</span><button class="ad-skip" id="ad-skip" type="button" disabled>Lanjutkan</button></div></section></div>
+  <script src="script.js"></script>
+</body>
+</html>
