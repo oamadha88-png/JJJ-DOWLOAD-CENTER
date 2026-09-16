@@ -205,11 +205,11 @@ function openAdBeforeRedirect(url) {
   skip.disabled = true;
   countdown.textContent = `Lanjut dalam ${seconds} detik`;
   adModal.hidden = false;
-  requestAnimationFrame(() => {
+  setTimeout(() => {
     document.querySelectorAll('#ad-modal ins.adsbygoogle').forEach(() => {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     });
-  });
+  }, 100);
   adTimer = setInterval(() => {
     seconds -= 1;
     countdown.textContent = seconds > 0 ? `Lanjut dalam ${seconds} detik` : 'Siap dilanjutkan';
