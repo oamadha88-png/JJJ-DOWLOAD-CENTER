@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f4ef" />
+  <title>JJJ Delivery Service — Jujoys Group</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="JJJ Delivery Service oleh Jujoys Group">
+        <span class="brand-mark" aria-hidden="true"><span class="brand-initials">JJJ</span><i class="brand-arrow">→</i></span>
+        <span class="brand-copy"><strong>JJJ Delivery Service</strong><small>Jujoys Group</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#layanan">Layanan</a>
+        <a href="#cara-kerja">Cara kerja</a>
+        <a href="#bantuan">Bantuan</a>
+      </nav>
+      <button class="account-button" id="account-button" type="button">Masuk <span aria-hidden="true">↗</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Pengiriman lebih tenang, setiap hari</p>
+          <h1 id="hero-title">Kirim barang.<br /><em>Sampai dengan yakin.</em></h1>
+          <p class="hero-description">Satu tempat untuk membandingkan ongkir, menjemput paket, dan memantau perjalanan barangmu secara real-time.</p>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true"><span>AS</span><span>DN</span><span>MR</span><span>+</span></div>
+            <p><strong>12.000+</strong> pengiriman selesai bulan ini</p>
+          </div>
+        </div>
+
+        <div class="shipping-panel" aria-label="JJJ Delivery Service tools">
+          <div class="panel-tabs" role="tablist" aria-label="Pilih kebutuhan">
+            <button class="tab-button is-active" id="rate-tab" role="tab" aria-selected="true" aria-controls="rate-panel" data-tab="rate-panel">Cek tarif</button>
+            <button class="tab-button" id="track-tab" role="tab" aria-selected="false" aria-controls="track-panel" data-tab="track-panel">Lacak paket</button>
+          </div>
+
+          <div class="tab-panel is-active" id="rate-panel" role="tabpanel" aria-labelledby="rate-tab">
+            <div class="panel-heading">
+              <div><p class="panel-kicker">Buat pengiriman baru</p><h2>Berapa ongkirnya?</h2></div>
+              <span class="secure-badge">Terpercaya <span aria-hidden="true">✓</span></span>
+            </div>
+            <form id="rate-form" class="shipping-form">
+              <div class="location-row">
+                <label class="field"><span>Alamat jemput</span><div class="input-wrap"><span class="input-icon" aria-hidden="true">⌖</span><input id="origin" name="origin" placeholder="Masukkan alamat jemput" oninput="calculateVisibleRate()" required /></div></label>
+                <span class="route-line" aria-hidden="true"></span>
+                <label class="field"><span>Alamat penerima</span><div class="input-wrap"><span class="input-icon" aria-hidden="true">⌖</span><input id="destination" name="destination" placeholder="Masukkan alamat penerima" oninput="calculateVisibleRate()" required /></div></label>
+              </div>
+              <div class="package-details">
+                <div class="field-label"><span>Isi detail paket</span><small>Informasi untuk kurir</small></div>
+                <div class="package-grid">
+                  <label class="field"><span>Jenis barang</span><div class="input-wrap"><input id="package-type" name="package-type" placeholder="Contoh: Dokumen, pakaian" required /></div></label>
+                  <label class="field"><span>Berat paket</span><div class="input-wrap"><input id="package-weight" name="package-weight" type="number" min="1" step="0.5" value="1" required /><span class="input-suffix">kg</span></div></label>
+                  <label class="field"><span>Ukuran paket</span><div class="input-wrap select-wrap"><select id="package-size" name="package-size"><option value="small">Kecil · maksimal 30 cm</option><option value="medium">Sedang · maksimal 60 cm</option><option value="large">Besar · di atas 60 cm</option></select></div></label>
+                </div>
+                <label class="check-field"><input id="fragile" name="fragile" type="checkbox" /><span class="check-box" aria-hidden="true">✓</span><span>Barang mudah pecah atau perlu penanganan khusus</span></label>
+              </div>
+            </form>
+            <div class="fleet-picker">
+              <div class="field-label"><span>Pilih armada</span><small>Harga berdasarkan jarak</small></div>
+              <div class="fleet-choice-grid" role="radiogroup" aria-label="Pilihan armada">
+                <label class="fleet-choice is-selected">
+                  <input type="radio" name="fleet" value="pickup" checked />
+                  <span class="fleet-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/2009-2012_Suzuki_Carry_DA63T.jpg" alt="Mobil pickup Suzuki New Carry" /></span>
+                  <span class="fleet-details"><strong>Pickup / New Carry</strong><small>Untuk barang besar dan banyak</small></span>
+                </label>
+                <label class="fleet-choice">
+                  <input type="radio" name="fleet" value="calya" />
+                  <span class="fleet-photo"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=500&q=80" alt="Mobil Calya" /></span>
+                  <span class="fleet-details"><strong>Calya</strong><small>Nyaman untuk paket ringan</small></span>
+                </label>
+              </div>
+            </div>
+            <div class="auto-price-note" id="auto-price-note">Tarif otomatis menyesuaikan jarak</div>
+            <div class="rate-result" id="rate-result" aria-live="polite"><div class="empty-result">Isi kedua alamat untuk melihat estimasi harga.</div></div>
+            <a class="primary-button order-button" id="order-button" href="https://wa.me/6281212082536" target="_blank" rel="noopener noreferrer" hidden>Pesan via WhatsApp <span>↗</span></a>
+          </div>
+
+          <div class="tab-panel" id="track-panel" role="tabpanel" aria-labelledby="track-tab" hidden>
+            <div class="panel-heading"><div><p class="panel-kicker">Pantau perjalanan paket</p><h2>Paketmu di mana?</h2></div><span class="secure-badge">Live update <span class="live-dot"></span></span></div>
+            <form id="tracking-form" class="tracking-form">
+              <label class="field"><span>Nomor resi</span><div class="input-wrap"><span class="input-icon" aria-hidden="true">#</span><input id="tracking-number" name="tracking-number" placeholder="Contoh: KML-482910" required /></div></label>
+              <button class="primary-button" type="submit">Lacak paket <span aria-hidden="true">→</span></button>
+            </form>
+            <div class="tracking-result" id="tracking-result" aria-live="polite"></div>
+            <details class="admin-panel">
+              <summary>Panel admin · Perbarui status</summary>
+              <form id="tracking-admin-form" class="admin-form">
+                <label class="field"><span>Nomor resi</span><div class="input-wrap"><input id="admin-tracking-number" name="admin-tracking-number" placeholder="KML-482910" required /></div></label>
+                <div class="admin-form-row">
+                  <label class="field"><span>Status paket</span><div class="input-wrap select-wrap"><select id="admin-status" name="admin-status"><option>Menunggu pickup</option><option selected>Dalam perjalanan</option><option>Tiba di kota tujuan</option><option>Sudah diterima</option></select></div></label>
+                  <label class="field"><span>Lokasi kurir</span><div class="input-wrap"><input id="admin-location" name="admin-location" placeholder="Contoh: Jakarta Selatan" required /></div></label>
+                </div>
+                <label class="field"><span>Catatan perjalanan</span><div class="input-wrap"><input id="admin-note" name="admin-note" placeholder="Contoh: Paket sedang diantar" required /></div></label>
+                <button class="secondary-button" type="submit">Simpan pembaruan <span>✓</span></button>
+              </form>
+              <div class="admin-summary" id="admin-summary" aria-live="polite"></div>
+              <p class="admin-note">Data panel ini tersimpan di backend dengan database lokal. Untuk dipakai banyak admin, tingkatkan ke database cloud dan autentikasi user.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-strip" aria-label="Keunggulan JJJ Delivery Service"><span>Jemput di tempat</span><i></i><span>Harga transparan</span><i></i><span>Asuransi tersedia</span><i></i><span>Customer care manusia</span></section>
+
+      <section class="services-section" id="layanan" aria-labelledby="services-title">
+        <div class="section-intro"><p class="eyebrow">Dibuat untuk ritmemu</p><h2 id="services-title">Semua cara kirim,<br /><em>dalam satu kendali.</em></h2></div>
+        <div class="service-grid">
+          <article class="service-card service-card-main"><div class="card-icon orange">↗</div><p class="card-number">01 / 03</p><h3>Antar hari ini</h3><p>Untuk barang yang tidak bisa menunggu. Kurir pilihan kami siap menjemput dalam hitungan menit.</p><a href="#rate-form" class="card-link">Coba sekarang <span>→</span></a><div class="card-art"><span class="art-road"></span><span class="art-pin">✦</span></div></article>
+          <article class="service-card"><div class="card-icon green">◌</div><p class="card-number">02 / 03</p><h3>Bisnis tumbuh</h3><p>Atur pengiriman toko online dalam jumlah banyak, lengkap dengan laporan yang rapi.</p><a href="#bantuan" class="card-link">Pelajari lebih lanjut <span>→</span></a></article>
+          <article class="service-card"><div class="card-icon blue">▰</div><p class="card-number">03 / 03</p><h3>Antar kota</h3><p>Jangkau keluarga dan pelanggan di seluruh Indonesia dengan tarif yang masuk akal.</p><a href="#rate-form" class="card-link">Lihat rute <span>→</span></a></article>
+        </div>
+      </section>
+
+      <section class="steps-section" id="cara-kerja" aria-labelledby="steps-title"><div><p class="eyebrow">Semudah itu</p><h2 id="steps-title">Dari pintu rumah<br />ke pintu tujuan.</h2></div><div class="steps-list"><div class="step"><span>01</span><div><h3>Isi detail paket</h3><p>Masukkan lokasi, berat, dan layanan yang kamu butuhkan.</p></div></div><div class="step"><span>02</span><div><h3>Pilih dan pesan</h3><p>Bandingkan harga, lalu pesan kurir dalam satu klik.</p></div></div><div class="step"><span>03</span><div><h3>Pantau sampai tiba</h3><p>Dapatkan kabar di setiap tahap perjalanan paket.</p></div></div></div></section>
+
+      <section class="help-section" id="bantuan"><div><p class="eyebrow">Butuh teman kirim?</p><h2>Ada yang bisa<br /><em>kami bantu?</em></h2></div><a class="outline-button whatsapp-button" href="https://wa.me/6281212082536" target="_blank" rel="noopener noreferrer">Hubungi WhatsApp · 081212082536 <span>↗</span></a></section>
+    </main>
+
+    <footer class="footer"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><span class="brand-initials">JJJ</span><i class="brand-arrow">→</i></span><span class="brand-copy"><strong>JJJ Delivery Service</strong><small>Jujoys Group</small></span></a><p>© 2026 JJJ Delivery Service. Jujoys Group.</p><div><a href="https://instagram.com/jujoyssewapickup" target="_blank" rel="noopener noreferrer"><strong>Instagram</strong> · Jujoys Sewa Pick Up</a><a href="mailto:jujoysteamwork@gmail.com"><strong>Email</strong> · jujoysteamwork@gmail.com</a></div></footer>
+  </div>
+  <div class="modal-backdrop" id="account-modal" hidden>
+    <section class="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Tutup">×</button>
+      <div class="account-brand"><span class="brand-mark" aria-hidden="true"><span class="brand-initials">JJJ</span><i class="brand-arrow">→</i></span><span class="brand-copy"><strong>JJJ Delivery Service</strong><small>Jujoys Group</small></span></div>
+      <div class="account-progress"><span class="progress-step is-current" data-progress="login">1</span><i></i><span class="progress-step" data-progress="register">2</span><i></i><span class="progress-step" data-progress="profile">3</span><i></i><span class="progress-step" data-progress="vehicle">4</span></div>
+      <div class="account-view is-visible" data-view="login">
+        <p class="panel-kicker">Selamat datang kembali</p><h2 id="account-title">Masuk ke akunmu.</h2><p class="modal-copy">Simpan alamat, pilihan armada, dan riwayat kiriman dalam satu tempat.</p>
+        <form id="login-form" class="account-form"><label class="field"><span>Email</span><div class="input-wrap"><input name="email" type="email" placeholder="kamu@email.com" autocomplete="email" required /></div></label><label class="field"><span>Kata sandi</span><div class="input-wrap"><input name="password" type="password" placeholder="Masukkan kata sandi" autocomplete="current-password" required /></div></label><button class="primary-button" type="submit">Masuk sekarang <span>→</span></button></form>
+        <p class="modal-switch">Belum punya akun? <button type="button" data-open-register>Daftar gratis</button></p>
+      </div>
+      <div class="account-view" data-view="register">
+        <p class="panel-kicker">Buat akun baru</p><h2>Mulai perjalanan kirimmu.</h2><p class="modal-copy">Pilih peran yang cocok: customer untuk order, atau driver untuk mengelola tugas kiriman.</p>
+        <form id="register-form" class="account-form">
+          <label class="field"><span>Nama lengkap</span><div class="input-wrap"><input name="name" placeholder="Nama lengkap" required /></div></label>
+          <label class="field"><span>Email</span><div class="input-wrap"><input name="email" type="email" placeholder="kamu@email.com" autocomplete="email" required /></div></label>
+          <label class="field"><span>Kata sandi</span><div class="input-wrap"><input name="password" type="password" placeholder="Buat kata sandi" autocomplete="new-password" required /></div></label>
+          <label class="field"><span>Peran</span><div class="input-wrap select-wrap"><select name="role"><option value="customer">Customer</option><option value="driver">Driver</option></select></div></label>
+          <button class="primary-button" type="submit">Buat akun <span>→</span></button>
+        </form>
+        <p class="modal-switch">Sudah punya akun? <button type="button" data-open-login>Kembali masuk</button></p>
+      </div>
+      <div class="account-view" data-view="profile">
+        <p class="panel-kicker">Langkah 2 dari 3</p><h2>Lengkapi profilmu.</h2><p class="modal-copy">Data ini membantu kurir menemukanmu tanpa perlu chat berulang.</p>
+        <form id="profile-form" class="account-form"><label class="field"><span>Nama lengkap</span><div class="input-wrap"><input name="fullName" placeholder="Nama kamu" required /></div></label><label class="field"><span>Nomor HP</span><div class="input-wrap"><input name="phone" type="tel" placeholder="08xxxxxxxxxx" required /></div></label><label class="field"><span>Alamat utama</span><div class="input-wrap"><input name="address" placeholder="Alamat penjemputan" required /></div></label><button class="primary-button" type="submit">Simpan profil <span>→</span></button></form>
+      </div>
+      <div class="account-view" data-view="vehicle">
+        <p class="panel-kicker">Langkah 3 dari 3</p><h2>Pilih armada favorit.</h2><p class="modal-copy">Kamu bisa menggantinya kapan saja saat membuat pengiriman.</p>
+        <div class="fleet-list"><button class="fleet-card is-selected" type="button" data-fleet="Motor"><span class="fleet-icon">⌁</span><span><strong>Motor</strong><small>Cepat di jalan kecil · hingga 20 kg</small></span><b>Mulai Rp 11rb</b></button><button class="fleet-card" type="button" data-fleet="Mobil"><span class="fleet-icon">▣</span><span><strong>Mobil</strong><small>Lebih aman untuk barang besar · hingga 100 kg</small></span><b>Mulai Rp 24rb</b></button><button class="fleet-card" type="button" data-fleet="Van"><span class="fleet-icon">▰</span><span><strong>Van</strong><small>Kapasitas luas untuk bisnis · hingga 500 kg</small></span><b>Mulai Rp 48rb</b></button></div><button class="primary-button" id="finish-account" type="button">Selesai, mulai kirim <span>→</span></button>
+      </div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js?v=20260912-5"></script>
+</body>
+</html>

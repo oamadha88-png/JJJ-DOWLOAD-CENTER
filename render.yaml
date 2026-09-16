@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: jjj-delivery-service
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false
+    disk:
+      name: jjj-delivery-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
