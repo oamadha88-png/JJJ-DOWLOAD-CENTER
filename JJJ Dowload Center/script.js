@@ -105,8 +105,8 @@ function updateGithubLoginState() {
   }
 
   githubLoginButton.classList.remove('is-logged-in');
-  githubLoginLabel.textContent = 'Masuk ke JUJOYS GROUP';
-  githubLoginButton.title = 'Masuk ke JUJOYS GROUP';
+  githubLoginLabel.textContent = 'Masuk ke Jujoys Group';
+  githubLoginButton.title = 'Masuk ke Jujoys Group';
 }
 
 function openGithubLogin() {
@@ -130,7 +130,7 @@ function handleGithubLogin(event) {
   const password = String(formData.get('githubPassword') || '').trim();
 
   if (!username || !password) {
-    alert('Masukkan username/email dan password JUJOYS GROUP terlebih dahulu.');
+    alert('Masukkan username/email dan password Jujoys Group terlebih dahulu.');
     return;
   }
 
