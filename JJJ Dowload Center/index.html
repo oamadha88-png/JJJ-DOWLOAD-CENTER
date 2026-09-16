@@ -55,11 +55,13 @@
       background-size: cover;
     }
     .page-shell{background:rgba(255,255,255,.12);backdrop-filter:blur(2px);border-radius:0}
-    .brand-symbol{overflow:hidden;background:var(--white);border-radius:50%;box-shadow:0 4px 12px rgba(23,37,31,.12)}
-    .brand-symbol img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+    .brand-symbol{width:42px;height:42px;display:grid;place-items:center;background:var(--ink);border-radius:50%;box-shadow:0 4px 12px rgba(23,37,31,.12);color:var(--lime);font:700 18px 'Space Grotesk',sans-serif;letter-spacing:-.08em}
+    .brand-symbol img{display:none}
     .app-avatar{overflow:hidden;padding:0}
-    .app-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-    .phone-card .app-avatar{width:100%;height:112px;margin:0 auto 18px;border-radius:16px}
+    .app-avatar img{display:none}
+    .app-avatar-jjj{display:grid;place-items:center;width:100%;height:112px;margin:0 auto 18px;border-radius:16px;background:linear-gradient(135deg, #17251f 0%, #2d443e 100%);color:#d5f36b;font:700 34px 'Space Grotesk',sans-serif;letter-spacing:-.12em;box-shadow:0 14px 26px rgba(23,37,31,.12)}
+    .phone-brand{display:grid;place-items:center;width:72px;height:72px;margin:0 auto 12px;border-radius:18px;background:linear-gradient(135deg, #17251f 0%, #2d443e 100%);color:#d5f36b;font:700 28px 'Space Grotesk',sans-serif;letter-spacing:-.12em;box-shadow:0 14px 26px rgba(23,37,31,.12)}
+    .phone-label{margin:0 0 8px;color:#7c877f;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
     .brand strong{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
   </style>
 </head>
@@ -67,8 +69,8 @@
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Jujoys Download Center">
-        <span class="brand-symbol"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></span>
-        <span><strong>JUJOYS</strong><small>Download Center</small></span>
+        <span class="brand-symbol" aria-label="Logo JJJ">JJJ</span>
+        <span><strong>JJJ</strong><small>Download Center</small></span>
       </a>
       <nav class="nav-links" aria-label="Navigasi utama">
         <a href="#apps">Aplikasi</a>
@@ -97,9 +99,10 @@
           <div class="phone-card">
             <div class="phone-notch"></div>
             <div class="phone-top"><span>09:41</span><span>● ● ▪</span></div>
-            <div class="app-avatar"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></div>
-            <p class="phone-label">JUJOYS DAILY</p>
-            <strong>Make today<br /><em>count.</em></strong>
+            <div class="app-avatar-jjj" aria-label="Logo JJJ">JJJ</div>
+            <div class="phone-brand" aria-label="JJJ">JJJ</div>
+            <p class="phone-label">JJJ</p>
+            <strong>Download Center<br /><em>by JJJ</em></strong>
             <div class="phone-stat"><span>Aktivitas hari ini</span><b>82%</b></div>
             <div class="stat-bar"><span></span></div>
             <div class="phone-grid"><i>◒</i><i>✦</i><i>↗</i></div>
@@ -120,7 +123,7 @@
 
       <section class="help-section" id="help"><div><p class="eyebrow">Butuh bantuan?</p><h2>Temukan yang<br /><em>kamu butuhkan.</em></h2></div><a class="outline-button" href="mailto:jujoysteamwork@gmail.com">Hubungi kami <span>↗</span></a></section>
     </main>
-    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-symbol"><img src="assets/jujoys-group.jpg" alt="Logo Jujoys Group" /></span><span><strong>JUJOYS</strong><small>Download Center</small></span></a><p>© 2026 Jujoys Group. Semua hak dilindungi.</p><span>Made for better days.</span></footer>
+    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-symbol" aria-label="Logo JJJ">JJJ</span><span><strong>JJJ</strong><small>Download Center</small></span></a><p>© 2026 Jujoys Group. Semua hak dilindungi.</p><span>Made for better days.</span></footer>
   </div>
   <div class="modal-backdrop" id="app-modal" hidden><section class="app-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" type="button" aria-label="Tutup">×</button><div class="modal-icon" id="modal-icon">J</div><p class="eyebrow" id="modal-platform">Android</p><h2 id="modal-title">Nama aplikasi</h2><p id="modal-description"></p><div class="modal-meta"><span id="modal-version">Versi 1.0.0</span><span id="modal-size">24 MB</span><span id="modal-rating">★ 4.9</span><span id="modal-format">APK</span></div><a class="primary-button modal-download" id="modal-download" href="#" download>Download aplikasi <span>↓</span></a></section></div>
   <div class="github-modal" id="github-login-modal" hidden>
