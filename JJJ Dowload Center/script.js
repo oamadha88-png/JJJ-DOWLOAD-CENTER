@@ -92,7 +92,7 @@ const githubLoginClose = document.querySelector('#github-close');
 let activeFilter = 'all';
 let adTimer;
 let pendingOfficialUrl = '';
-let githubUser = localStorage.getItem('jujoysGithubUser') || '';
+let githubUser = localStorage.getItem('jujoysGroupUser') || '';
 
 function updateGithubLoginState() {
   if (!githubLoginButton || !githubLoginLabel) return;
@@ -105,8 +105,8 @@ function updateGithubLoginState() {
   }
 
   githubLoginButton.classList.remove('is-logged-in');
-  githubLoginLabel.textContent = 'Masuk GitHub';
-  githubLoginButton.title = 'Masuk GitHub';
+  githubLoginLabel.textContent = 'Masuk ke JUJOYS GROUP';
+  githubLoginButton.title = 'Masuk ke JUJOYS GROUP';
 }
 
 function openGithubLogin() {
@@ -130,12 +130,12 @@ function handleGithubLogin(event) {
   const password = String(formData.get('githubPassword') || '').trim();
 
   if (!username || !password) {
-    alert('Masukkan username/email dan password GitHub terlebih dahulu.');
+    alert('Masukkan username/email dan password JUJOYS GROUP terlebih dahulu.');
     return;
   }
 
   githubUser = username;
-  localStorage.setItem('jujoysGithubUser', githubUser);
+  localStorage.setItem('jujoysGroupUser', githubUser);
   updateGithubLoginState();
   closeGithubLogin();
   githubLoginForm.reset();
