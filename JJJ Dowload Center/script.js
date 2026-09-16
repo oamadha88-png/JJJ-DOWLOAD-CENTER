@@ -105,8 +105,8 @@ function updateGithubLoginState() {
   }
 
   githubLoginButton.classList.remove('is-logged-in');
-  githubLoginLabel.textContent = 'Masuk ke Jujoys Group';
-  githubLoginButton.title = 'Masuk ke Jujoys Group';
+  githubLoginLabel.textContent = 'Masuk Jujoys Group';
+  githubLoginButton.title = 'Masuk Jujoys Group';
 }
 
 function openGithubLogin() {
