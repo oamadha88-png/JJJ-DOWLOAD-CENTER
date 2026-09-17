@@ -6,8 +6,8 @@ html { scroll-behavior:smooth; }
 body {
   margin:0;
   background:
-    linear-gradient(rgba(245,247,246,.72), rgba(245,247,246,.72)),
-    url('./JJJ%20Dowload%20Center/assets/jujoys-group.jpg') center/cover no-repeat fixed;
+    linear-gradient(rgba(246,244,239,.54), rgba(246,244,239,.42)),
+    url('docs/assets/jujoys-group.jpg') center/cover fixed no-repeat;
   color:var(--ink);
   font-family:'DM Sans',sans-serif;
   -webkit-font-smoothing:antialiased;
@@ -17,7 +17,7 @@ button,input,select { font:inherit; }
 button { cursor:pointer; }
 .site-shell {
   overflow:hidden;
-  background:rgba(246,244,239,.12);
+  background:rgba(246,244,239,.08);
 }
 .topbar,.hero-section,.services-section,.steps-section,.help-section,.footer { width:min(1180px,calc(100% - 64px)); margin:auto; }
 .topbar { height:86px; display:flex; align-items:center; justify-content:space-between; }
@@ -25,43 +25,15 @@ button { cursor:pointer; }
 .brand-mark {
   display:flex;
   align-items:center;
-  gap:8px;
   min-width:0;
 }
-.brand-crest {
-  position:relative;
-  width:34px;
-  height:34px;
-  border:3px solid var(--orange);
+.brand-mark img {
+  display:block;
+  width:46px;
+  height:46px;
   border-radius:50%;
-  background:transparent;
+  object-fit:cover;
   flex-shrink:0;
-}
-.brand-crest::before {
-  content:'';
-  position:absolute;
-  inset:5px 2px 5px 11px;
-  border-radius:50%;
-  background:var(--orange);
-}
-.brand-crest::after {
-  content:'';
-  position:absolute;
-  width:15px;
-  height:15px;
-  right:4px;
-  top:7px;
-  border-radius:50%;
-  background:rgba(246,244,239,.98);
-  box-shadow:-8px 0 0 0 rgba(246,244,239,.98);
-}
-.brand-initials {
-  font-family:'Space Grotesk',sans-serif;
-  font-size:30px;
-  line-height:1;
-  letter-spacing:-.12em;
-  color:var(--ink);
-  font-weight:700;
 }
 .nav-links { display:flex; gap:34px; margin-left:90px; color:#737a77; font-size:13px; }
 .nav-links a:hover,.footer a:hover { color:var(--orange); }
@@ -97,7 +69,7 @@ h1 em,h2 em { color:var(--orange); font-style:normal; }
 .services-section { padding:118px 0 125px; }.section-intro { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:48px; }.section-intro .eyebrow { margin-bottom:0; }.section-intro h2 { margin:0; font-size:46px; line-height:1.03; }.service-grid { display:grid; grid-template-columns:1.16fr 1fr 1fr; gap:15px; }.service-card { position:relative; min-height:335px; padding:27px; overflow:hidden; border-radius:13px; background:#e7ede3; }.service-card:nth-child(2){background:var(--green)}.service-card:nth-child(3){background:var(--blue)}.service-card-main { background:var(--orange-soft); }.card-icon { width:35px; height:35px; display:grid; place-items:center; margin-bottom:36px; border-radius:50%; font-size:17px; }.card-icon.orange { background:var(--orange); color:white; }.card-icon.green { background:#78a77b; color:white; }.card-icon.blue { background:#4e9197; color:white; }.card-number { margin-bottom:14px; color:#7e8981; font-size:10px; font-weight:700; }.service-card h3 { margin-bottom:11px; font:600 24px 'Space Grotesk',sans-serif; letter-spacing:-.05em; }.service-card > p:not(.card-number) { max-width:220px; color:#65716b; font-size:12px; line-height:1.55; }.card-link { position:absolute; bottom:26px; left:27px; color:var(--ink); font-size:11px; font-weight:700; }.card-link span { margin-left:12px; color:var(--orange); font-size:17px; }.card-art { position:absolute; right:-5px; bottom:-18px; width:145px; height:105px; opacity:.75; }.art-road { position:absolute; right:0; bottom:3px; width:150px; height:38px; border:2px solid var(--orange); border-top:0; border-left:0; border-radius:0 0 100% 0; transform:skewY(-18deg); }.art-pin { position:absolute; top:5px; right:35px; color:var(--orange); font-size:32px; }
 .steps-section { display:grid; grid-template-columns:.85fr 1.15fr; gap:130px; padding:105px 0; border-top:1px solid var(--line); }.steps-section h2,.help-section h2 { margin:0; font-size:44px; line-height:1.02; }.steps-list { display:grid; gap:0; }.step { display:grid; grid-template-columns:47px 1fr; gap:20px; padding:0 0 25px; margin-bottom:25px; border-bottom:1px solid var(--line); }.step > span { color:var(--orange); font:600 13px 'Space Grotesk',sans-serif; }.step h3 { margin:0 0 7px; font:600 18px 'Space Grotesk',sans-serif; }.step p { margin:0; color:var(--muted); font-size:12px; line-height:1.5; }
 .help-section { display:flex; align-items:center; justify-content:space-between; padding:93px 0; border-top:1px solid var(--line); }.outline-button { width:166px; border:1px solid var(--ink); background:transparent; color:var(--ink); }.outline-button:hover { background:var(--ink); color:white; box-shadow:none; }
-.footer { display:flex; align-items:center; justify-content:space-between; padding:27px 0 35px; border-top:1px solid var(--line); color:#89918c; font-size:11px; }.footer .brand { color:var(--ink); font-size:16px; }.footer .brand-mark { transform:scale(.82); transform-origin:left center; }.footer p { margin:0; }.footer div { display:flex; gap:20px; }
+.footer { display:flex; align-items:center; justify-content:space-between; padding:27px 0 35px; border-top:1px solid var(--line); color:#1e2524; font-size:11px; }.footer a { color:#1e2524; }.footer .brand { color:var(--ink); font-size:16px; }.footer .brand-mark { transform:scale(.82); transform-origin:left center; }.footer p { margin:0; }.footer div { display:flex; gap:20px; }
 .toast { position:fixed; right:24px; bottom:24px; z-index:4; padding:13px 17px; border-radius:7px; background:var(--ink); color:white; font-size:12px; opacity:0; transform:translateY(12px); pointer-events:none; transition:.25s; }.toast.is-visible { opacity:1; transform:translateY(0); }
 .modal-backdrop { position:fixed; inset:0; z-index:10; display:grid; place-items:center; padding:20px; background:rgba(30,37,36,.48); backdrop-filter:blur(5px); }.modal-backdrop[hidden] { display:none; }.account-modal { position:relative; width:min(100%,430px); padding:29px; border:1px solid #e5e4dd; border-radius:18px; background:var(--white); box-shadow:0 30px 80px rgba(20,30,25,.2); animation:modal-in .25s ease; }.modal-close { position:absolute; top:19px; right:22px; width:29px; height:29px; border:0; border-radius:50%; background:#f0f2ed; color:var(--muted); font-size:21px; line-height:1; }.account-brand { display:flex; align-items:center; gap:9px; margin-bottom:26px; font:600 13px 'Space Grotesk',sans-serif; }.account-brand .brand-mark { width:25px; height:25px; font-size:14px; }.account-progress { display:flex; align-items:center; margin-bottom:26px; }.progress-step { display:grid; place-items:center; width:23px; height:23px; border-radius:50%; background:#edf0eb; color:#98a19b; font-size:10px; font-weight:700; }.progress-step.is-current,.progress-step.is-done { background:var(--orange); color:#fff; }.account-progress i { flex:1; height:1px; margin:0 7px; background:#dfe3dd; }.account-view { display:none; }.account-view.is-visible { display:block; animation:slide-in .25s ease; }.account-view h2 { margin:0 0 10px; font-size:31px; }.modal-copy { max-width:325px; margin-bottom:23px; color:var(--muted); font-size:12px; line-height:1.55; }.account-form { display:grid; gap:15px; }.account-form .primary-button,.account-modal > .primary-button { margin-top:4px; }.modal-switch { margin:20px 0 0; color:#8c948f; text-align:center; font-size:11px; }.modal-switch button { padding:0; border:0; background:none; color:var(--orange); font-weight:700; }.fleet-list { display:grid; gap:9px; margin-bottom:17px; }.fleet-card { display:grid; grid-template-columns:35px 1fr auto; gap:10px; align-items:center; padding:12px; border:1px solid var(--line); border-radius:8px; background:#fbfbf8; text-align:left; }.fleet-card.is-selected { border-color:var(--orange); background:#fff7f2; }.fleet-icon { display:grid; place-items:center; width:32px; height:32px; border-radius:8px; background:var(--orange-soft); color:var(--orange); font-size:18px; }.fleet-card strong,.fleet-card small { display:block; }.fleet-card strong { color:var(--ink); font-size:12px; }.fleet-card small { margin-top:4px; color:#929b96; font-size:9px; }.fleet-card b { color:var(--orange); font-size:9px; white-space:nowrap; }
 @keyframes slide-in { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:translateY(0); } } @keyframes modal-in { from { opacity:0; transform:scale(.97) translateY(8px); } to { opacity:1; transform:scale(1) translateY(0); } }
